@@ -6,6 +6,7 @@ body
 
     margin:0;
     padding: 0;
+    
 }
 .options-cont
 {
@@ -54,6 +55,7 @@ img{
     left:25vw;
     border: 3px;
     display: none;
+    padding :0.3rem;
 }
 .pencil-width-cont
 {
@@ -98,6 +100,10 @@ img{
 .blue
 {
     background-color: blue;
+}
+.white
+{
+    background-color: white;
 }
 
 .eraser-tool-cont{
