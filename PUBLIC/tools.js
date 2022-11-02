@@ -17,14 +17,14 @@ let upload = document.querySelector(".upload");
 // false -- > hide tools
 optionscontainer.addEventListener("click", (e) => {
 
-
-    if (optionsFlag == true) {
-        closetools();
-        optionsFlag = false;
+    optionsFlag=!optionsFlag;
+    if (optionsFlag) {
+        opentools();
+        
     }
     else {
-        opentools();
-        optionsFlag = true;
+        
+        closetools();
     }
 
 
