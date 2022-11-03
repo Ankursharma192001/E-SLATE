@@ -11,25 +11,85 @@ let pencil = document.querySelector(".pencil");
 let eraser = document.querySelector(".eraser");
 let sticky = document.querySelector(".sticky");
 let upload = document.querySelector(".upload");
+let choosenColor =document.querySelector(".pencil-curr-color");
 
+let remove = document.querySelector(".remove-all");
+
+
+let themeVal = document.querySelector(".toggle-btn");
+console.log(themeVal);
+console.log(optionscontainer);
 
 // true --- > to show tools
 // false -- > hide tools
+
 optionscontainer.addEventListener("click", (e) => {
 
-    optionsFlag=!optionsFlag;
+    optionsFlag = !optionsFlag;
     if (optionsFlag) {
         opentools();
-        
+
     }
     else {
-        
+
         closetools();
     }
 
 
 
 });
+
+let themeFlag = false;
+
+let infoForEraser = "white";
+
+
+
+themeVal.addEventListener("click", (e) => {
+
+
+    
+    let body = document.body;
+    console.log(body);
+    let list = body.classList;
+    if (list.contains("main-theme") === true) {
+        list.remove("main-theme");
+        list.add("dark-theme");
+        toolsCont.classList.remove("main-theme-style")
+        toolsCont.classList.add("dark-theme-style");
+        themeVal.classList.remove("main-theme-style")
+        themeVal.classList.add("dark-theme-style");
+        optionscontainer.classList.remove("main-theme-style")
+        optionscontainer.classList.add("dark-theme-style");
+        remove.classList.remove("main-theme-style")
+        remove.classList.add("dark-theme-style");
+        
+        infoForEraser = "black";
+        themeFlag=true;
+    }
+    else {
+        
+        list.remove("dark-theme");
+        list.add("main-theme");
+        toolsCont.classList.add("main-theme-style")
+        toolsCont.classList.remove("dark-theme-style");
+        themeVal.classList.add("main-theme-style")
+        themeVal.classList.remove("dark-theme-style");
+        optionscontainer.classList.add("main-theme-style")
+        optionscontainer.classList.remove("dark-theme-style");
+        remove.classList.add("main-theme-style")
+        remove.classList.remove("dark-theme-style");
+        infoForEraser = "white";
+        themeFlag=false;
+    }
+
+    console.log(infoForEraser);
+
+});
+
+
+
+
 
 function opentools() {
     let iconEle = optionscontainer.children[0];
@@ -200,7 +260,7 @@ upload.addEventListener("click", (e) => {
 
         let minimize = stickyContainer.querySelector(".minimize");
         let remove = stickyContainer.querySelector(".remove");
-    
+
 
         noteActions(minimize, remove, stickyContainer);
 

@@ -7,19 +7,37 @@
         <title> E-Slate </title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         
+        
        
         
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="media.css">
 </head>
-<body>
+
+<body class="main-theme">
     
-    <div class="options-cont">
-        <i class="fa-solid fa-bars"></i>
-    </div>
+    <div class="main-container">
 
-
-    <div class="tools-cont scale-tools" >
-
+        
+        <div class="options-cont main-theme-style">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        
+        
+        <div class="toggle-btn main-theme-style">
+            
+            <i class="fa-solid fa-circle-half-stroke"></i>
+            
+        </div>
+        
+        <div class="remove-all main-theme-style">
+            
+            <i class="fa-solid fa-trash"></i>
+            
+        </div>
+        
+    <div class="tools-cont scale-tools main-theme-style" >
+        
         <img class="pencil" src="Icons/Pencil.svg">
         <img class="eraser" src="Icons/Eraser.svg">
         <img class="download" src="Icons/Download.svg">
@@ -27,53 +45,62 @@
         <img class="sticky" src="Icons/StickyNote.svg">
         <img class="redo" src="Icons/Redo.svg">
         <img class="undo" src="Icons/Undo.svg">
-
+        
     </div>
-
-
+    
+    
     <div class="pencil-tool-cont">
-       
-        <div class="pencil-width-cont">
-           
-            <input type="range" min="2" max="10" value="3" class="pencil-width">
-
+        
+        <div class="pencil-curr-color">
+            <p>CURRENT COLOR</p>
         </div>
-         
-        <div class="pencil-color-container">
-            <div class="black pencil-color"></div>
+        
+        <div class="pencil-width-cont">
+            
+            <input type="range" min="2" max="10" value="3" class="pencil-width">
+            
+        </div>
+        
+        <div class="pencil-color-container ">
+            <div class="black pencil-color active-now"></div>
             <div class="red pencil-color"></div>
             <div class="blue pencil-color"></div>
-            <div class="white pencil-color"></div>
-
+            <div class="white pencil-color active-now"></div>
+            <div class="yellow pencil-color"></div>
+            <div class="green pencil-color"></div>
+            <div class="purple pencil-color"></div>
+            <div class="orange pencil-color"></div>
+            
         </div>
-
+        
     </div>
-
-    <div class="eraser-tool-cont">
-
-            <input type="range" min="2" max="20" value="3" class="eraser-width">
-
+    
+    <div class="eraser-tool-cont ">
+        
+        <input type="range" min="2" max="20" value="3" class="eraser-width">
+        
     </div>
-
+    
     <!-- <div class="sticky-cont">
         <div class="header-cont">
-           
+            
             <div class="minimize"></div>
             <div class="remove"></div>
-
+            
         </div>
-
+        
         <div class="note-cont">
-
+            
             <textarea></textarea>
             
         </div>
     </div> -->
+    </div>
     <canvas></canvas>
     <script src="https://cdn.socket.io/4.5.3/socket.io.min.js" integrity="sha384-WPFUvHkB1aHA5TDSZi6xtDgkF0wXJcIIxXhC6h8OT8EH3fC5PWro5pWJ1THjcfEi" crossorigin="anonymous"></script>
     <script>
         let socket = io.connect("http://localhost:5000");
-    </script>
+        </script>
     <script src="tools.js"></script>
     <script src="canvas.js" ></script>
     

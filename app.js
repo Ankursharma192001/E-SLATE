@@ -20,10 +20,17 @@ io.on("connection", (socket) => {
         // Now transfer data to all connected computers
         io.sockets.emit("beginPath", data);
     })
+    
     socket.on("drawStroke", (data) => {
         io.sockets.emit("drawStroke", data);
     })
     socket.on("redoUndo", (data) => {
         io.sockets.emit("redoUndo", data);
     })
+
+    // for clearing the socket
+
+    // socket.on("clearall",(data)=>{
+    //     io.sockets.emit("clearall",data);
+    // })
 })

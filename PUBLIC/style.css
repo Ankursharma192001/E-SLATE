@@ -6,13 +6,15 @@ body
 
     margin:0;
     padding: 0;
+    cursor: crosshair;
     
 }
 .options-cont
 {
     background-color: #f1f2f6;
-    height:4rem;
-    width:3.5rem;
+    /* background-color: red; */
+    height:4.5rem;
+    width:4.5rem;
     position: absolute;
     left:2rem;
     top:2rem;
@@ -21,10 +23,12 @@ body
     align-items: center;
     border-radius: 50%;
     font-size: 1.5rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 }
 img{
     display: block;
+    cursor: pointer;
 }
 .tools-cont
 {
@@ -36,27 +40,34 @@ img{
     position: absolute;
     left:25vw;
     top:1rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 }
 
 .tools-cont > *{
     display: block;
     width: 4rem;
+    cursor: pointer;
     
 }
 
 .pencil-tool-cont{
     background-color: #f1f2f6;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    height: 5rem;
-    width:8rem;
+    /* background-color: red; */
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    height: 11rem;
+    width:11rem;
     position: absolute;
     top:6rem;
     left:25vw;
     border: 3px;
     display: none;
-    padding :0.3rem;
+    padding :0.5rem;
+    border: 1px solid black;
+    cursor: pointer;
 }
+
+
 .pencil-width-cont
 {
     /* background-color: aqua; */
@@ -64,20 +75,26 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .pencil-width-cont input{
-    width: 80%;
+    width: 90%;
+    cursor: pointer;
 }
 
 .pencil-color-container
 {
     /* background-color: yellow; */
-    height: calc(100% - 2rem);
-    display: flex;
+    height: calc(100% - 5rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
+    flex-wrap: row-reverse;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
+    padding: 0.2rem;
+    cursor: pointer;
 }
 
 .pencil-color
@@ -85,25 +102,53 @@ img{
     width: 1.5rem;
     height: 2rem;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .black
 {
     background-color: black;
+    cursor: pointer;
 }
 
 .red
 {
     background-color: red;
+    cursor: pointer;
 }
 
 .blue
 {
     background-color: blue;
+    cursor: pointer;
 }
 .white
 {
     background-color: white;
+    box-shadow: rgb(43, 132, 227) 0px 20px 30px -10px;
+    cursor: pointer;
+}
+.purple
+{
+    background-color: purple;
+    cursor: pointer;
+}
+
+.green
+{
+    background-color: greenyellow;
+    cursor: pointer;
+}
+
+.orange
+{
+    background-color: orange;
+    cursor: pointer;
+}
+.yellow
+{
+    background-color: yellow;
+    cursor: pointer;
 }
 
 .eraser-tool-cont{
@@ -116,12 +161,14 @@ img{
   position: absolute;
   top:6rem;
   left:34vw;
+  cursor: pointer;
   background-color: #f1f2f6;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 }
 .eraser-tool-cont input
 {
     width: 80%;
+    cursor: pointer;
 }
 .scale-tools
 {
@@ -146,7 +193,8 @@ img{
     position: absolute;
     top:15rem;
     left:10rem;
-    
+    cursor: pointer;
+    box-shadow:	rgb(128,128,128) 0px 5px 15px;
 }
 
 .header-cont
@@ -155,6 +203,7 @@ img{
     background-color: #f1f2f6;
     display: flex;
     align-items: center;
+    cursor: pointer;
     justify-content: flex-end;
     
 
@@ -166,11 +215,12 @@ img{
     width: 1.3rem;
     margin-right: 1rem;
     border-radius: 50%;
+    cursor: pointer;
 }
 .note-cont
 {
     height: calc(100% - 2rem);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
     
     
 }
@@ -178,10 +228,12 @@ img{
 .minimize
 {
     background-color: #2ed573;
+    cursor: pointer;
 }
 .remove
 {
    background-color: #ff4757;
+   cursor: pointer;
 }
 
 textarea
@@ -191,10 +243,118 @@ textarea
     outline: none;
     resize: none;
     border:none;
+    cursor: pointer;
     
 }
 
 img{
     height: 100%;
     width: 100%;
+    cursor: pointer;
 }
+
+.toggle-btn 
+{
+    font-size:3.8rem;
+    background-color:  #f1f2f6;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left:10rem;
+    top:2rem;
+    padding: 0.4rem;
+    border-radius: 50%;
+    opacity: 80%;
+    cursor: pointer;
+    /* transition: all 1s ease-in-out; */
+    
+}
+
+
+.dark-theme{
+    background-color: black;
+    transition: all 0.5s ease-in-out;
+}
+
+
+  .main-theme{
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+.main-theme-style
+{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.dark-theme-style{
+
+    box-shadow:rgb(255, 255,0,0.5) 10px 10px 15px;
+    
+}
+
+.remove-all{
+    font-size:3.4rem;
+    background-color:  #f1f2f6;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left:18rem;
+    top:2rem;
+    padding: 0.7rem;
+    border-radius: 50%;
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.active-now
+{
+    box-shadow: rgb(43, 132, 227) 0px 20px 30px -10px;
+    border-color: aqua;
+    cursor: pointer;
+}
+.pencil-curr-color
+{
+    background-color: #ff4757;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 3rem;
+    color:white;
+    cursor: pointer;
+    /* text-shadow:1rem 1rem #f1f2f6 ; */
+}
+.options-cont:hover {
+    transform: scale(1.2); 
+    cursor: pointer;
+  }
+img{
+    display: block;
+    cursor: pointer;
+}
+img:hover {
+    cursor: pointer;
+    transform: scale(1.2); 
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+i:hover
+{    
+    cursor: pointer;
+      transform: scale(1.2); 
+      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+  }
+
+
+  .main-container
+    {    
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 100fr;
+        
+    }
+    
+  
